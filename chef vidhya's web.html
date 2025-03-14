@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Vidhya's Home Kitchen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffaf0;
+            color: #333;
+        }
+        header {
+            background-color: #d2691e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .banner {
+            background-color: #ffcc66;
+            color: #8b0000;
+            text-align: center;
+            padding: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .moving-text {
+            display: inline-block;
+            animation: moveText 10s linear infinite;
+        }
+        @keyframes moveText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            font-size: 20px;
+        }
+        h2 {
+            color: #d2691e;
+            font-size: 26px;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .meal-plan {
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .veg {
+            background-color: #228B22; /* Green for Vegetarian */
+            color: white;
+        }
+        .nonveg {
+            background-color: #B22222; /* Red for Non-Vegetarian */
+            color: white;
+        }
+        .meal-content {
+            display: none;
+            padding: 15px;
+            background-color: #ffe4b5;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .contact-info {
+            background-color: #ff6600;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+<header>🥘 Chef Vidhya's Home Kitchen</header>
+
+<div class="banner">
+    <span class="moving-text">🚀 Fastest Home Delivery • 🍛 Fresh & Healthy Meals • 💰 Affordable Prices • Now Taking Orders from March 30! • 🛒 Available on Swiggy, Zomato, Cooker & Direct Orders! 🍽️</span>
+</div>
+
+<div class="container">
+    <h2>🌟 Why Choose Chef Vidhya’s Home Kitchen?</h2>
+    <div class="box">
+        <ul>
+            <li>✅ 100% Fresh & Hygienic Food</li>
+            <li>✅ No Reused Oil, No Artificial Colors</li>
+            <li>✅ Energy-Rich & Homemade Taste</li>
+            <li>✅ Fastest Delivery at an Affordable Price</li>
+        </ul>
+    </div>
+
+    <h2>📅 Our Meal Plans</h2>
+    
+    <div class="meal-plan veg" onclick="toggleMeal('veg')">🥗 Vegetarian Combo (₹120) ▼</div>
+    <div id="veg" class="meal-content">
+        <ul>
+            <li>🥦 One vegetarian dry dish ( Poriyal)</li>
+            <li>🍛 One vegetarian gravy (Paneer Butter Masala, Kadai Paneer)</li>
+            <li>🍚 One variety rice (Tamarind Rice, Curd Rice)</li>
+            <li>🍞 Three Rotis / Naans</li>
+            <li>🍮 One dessert (Gulab Jamun, Rasgulla)</li>
+        </ul>
+    </div>
+
+    <div class="meal-plan nonveg" onclick="toggleMeal('nonveg')">🍗 Non-Vegetarian Combo (₹140) ▼</div>
+    <div id="nonveg" class="meal-content">
+        <ul>
+            <li>🥦 One vegetarian dry dish ( Poriyal)</li>
+            <li>🍛 One vegetarian gravy (Paneer Butter Masala, Kadai Paneer)</li>
+            <li>🥩 One non-vegetarian gravy (Butter Chicken, Chicken Tikka Masala)</li>
+            <li>🍚 One variety rice (Tamarind Rice, Curd Rice)</li>
+            <li>🍞 Three Rotis / Naans</li>
+            <li>🍮 One dessert (Gulab Jamun, Rasgulla)</li>
+        </ul>
+    </div>
+
+    <h2>📍 Order Now!</h2>
+    <div class="box">
+        🛒 Available on **Swiggy, Zomato, Cookr, and Direct Orders** starting **March 30**!  
+        <br><br>
+        📞 **Contact:** 9840639648  
+        📍 **Address:** G12, Belly Area, 19th Street, Anna Nagar, Chennai - 40
+    </div>
+</div>
+
+<div class="contact-info">
+    © 2024 Chef Vidhya’s Home Kitchen | Designed with ❤️
+</div>
+
+<script>
+    function toggleMeal(meal) {
+        var content = document.getElementById(meal);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
